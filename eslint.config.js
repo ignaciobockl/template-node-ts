@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   env: {
     es2021: true,
     node: true,
@@ -15,7 +15,7 @@ module.exports = {
     ecmaVersion: 'latest',
     project: 'tsconfig.json',
     sourceType: 'module',
-    tsconfigRootDir: __dirname,
+    // tsconfigRootDir: __dirname,
   },
   plugins: ['@typescript-eslint'],
   root: true,
@@ -73,3 +73,5 @@ module.exports = {
     'import/no-cycle': 'error',
   },
 };
+
+export default config;
