@@ -13,5 +13,11 @@
     "@types/node": "^20.12.12",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=20.6.1",
+    "npm": "please-use-pnpm",
+    "pnpm": ">9.0.0",
+    "yarn": "please-use-pnpm"
   }
 }
