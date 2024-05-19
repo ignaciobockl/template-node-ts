@@ -9,7 +9,7 @@ const config = {
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
-  ignorePatterns: ['.eslintrc.js', 'dist/**', 'node_modules/**'],
+  ignorePattern: ['.husky', 'build', 'config', 'dist', 'node_modules'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
