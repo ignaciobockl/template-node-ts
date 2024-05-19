@@ -1,24 +1,16 @@
-const config = {
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    project: './tsconfig.json',
+    sourceType: 'module',
+  },
   env: {
     es2021: true,
     node: true,
   },
-  extends: [
-    'eslint:recommended',
-    'airbnb-typescript/base',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-  ],
-  ignorePattern: ['.husky', 'build', 'config', 'dist', 'node_modules'],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    project: 'tsconfig.json',
-    sourceType: 'module',
-    // tsconfigRootDir: __dirname,
-  },
-  plugins: ['@typescript-eslint'],
-  root: true,
+  extends: ['airbnb-typescript', 'plugin:prettier/recommended'],
+  plugins: ['@typescript-eslint', 'prettier'],
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'error',
@@ -55,7 +47,6 @@ const config = {
     'no-unsafe-finally': 'warn',
     'no-unsafe-negation': 'error',
     'no-unsafe-optional-chaining': 'warn',
-    // 'no-unused-vars': 'error',
     'no-use-before-define': 'error',
     'use-isnan': 'error',
     'valid-typeof': 'error',
@@ -72,6 +63,15 @@ const config = {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/no-cycle': 'error',
   },
+  ignorePatterns: [
+    '.eslintrc.cjs',
+    '.husky',
+    '**/*.json',
+    '**/*.md',
+    'commitlint.config.ts',
+    'build',
+    'config',
+    'dist',
+    'node_modules',
+  ],
 };
-
-export default config;
